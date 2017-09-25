@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>VENTA DE PASAJES</title>
+	<link rel="stylesheet" href="main.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<table border=4>
+		<tr  id = "1" class="fila"> 
+			<td >4 
+			</td>
+			<td >8
+			</td>
+			<td >12
+			</td>
+			<td >16
+			</td>
+			<td >20
+			</td>
+			<td >24
+			</td>
+			<td >28
+			</td>
+			<td >32
+			</td>
+		</tr>
+		<tr >
+			<td width=100>3
+			</td>
+			<td width=100>7
+			</td>
+			<td width=100>11
+			</td>
+			<td width=100>15
+			</td>
+			<td width=100>19
+			</td>
+			<td width=100>23
+			</td>
+			<td width=100>27
+			</td>
+			<td width=100>31
+			</td>
+		</tr>
+		<tr>
+			<td width=100>2
+			</td>
+			<td width=100>6
+			</td>
+			<td width=100>10
+			</td>
+			<td width=100>14
+			</td>
+			<td width=100>18
+			</td>
+			<td width=100>22
+			</td>
+			<td width=100>26
+			</td>
+			<td width=100>30
+			</td>
+		</tr>
+		<tr >
+			<td width=100>1
+			</td>
+			<td width=100>5
+			</td>
+			<td width=100>9
+			</td>
+			<td width=100>13
+			</td>
+			<td width=100>17
+			</td>
+			<td width=100>21
+			</td>
+			<td width=100>25
+			</td>
+			<td >29
+			</td>
+		</tr>
+	</table>
+	<br>
+	<section  class="text-center">
+		<label>DNI</label><br>
+	    <input type="number" id="nro_dni">
+	    <button class="btn btn-primary" onclick="buscar()">Buscar</button><br>
+	    <br>
+		<label>NOMBRE</label>
+        <input type="text" id="name"><br>
+    	<label>APELLIDOS</label>
+        <input type="text" id="last_name"><br>
+		<label>DNI</label>
+        <input type="text" id="dni"><br>
+        <button class="btn btn-primary" id="reservar" onclick="reservar()">Reservar</button>
+		<button class="btn btn-primary" id="cancelar" onclick="cancelar()">Cancelar</button>
+	</section>
+	
+	<div id="mostrar"></div>
+
+	<div id="listar"></div>	
+	</div>
+	
+	<script src="main.js"></script>
+</body>
+</html>
