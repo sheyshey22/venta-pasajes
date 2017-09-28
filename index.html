@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>VENTA DE PASAJES</title>
 	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
@@ -11,103 +12,63 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
-<body>
-	<div class="container">
-		<table border=4>
-		<tr  id = "1" class="fila"> 
-			<td >4 
-			</td>
-			<td >8
-			</td>
-			<td >12
-			</td>
-			<td >16
-			</td>
-			<td >20
-			</td>
-			<td >24
-			</td>
-			<td >28
-			</td>
-			<td >32
-			</td>
-		</tr>
-		<tr >
-			<td width=100>3
-			</td>
-			<td width=100>7
-			</td>
-			<td width=100>11
-			</td>
-			<td width=100>15
-			</td>
-			<td width=100>19
-			</td>
-			<td width=100>23
-			</td>
-			<td width=100>27
-			</td>
-			<td width=100>31
-			</td>
-		</tr>
-		<tr>
-			<td width=100>2
-			</td>
-			<td width=100>6
-			</td>
-			<td width=100>10
-			</td>
-			<td width=100>14
-			</td>
-			<td width=100>18
-			</td>
-			<td width=100>22
-			</td>
-			<td width=100>26
-			</td>
-			<td width=100>30
-			</td>
-		</tr>
-		<tr >
-			<td width=100>1
-			</td>
-			<td width=100>5
-			</td>
-			<td width=100>9
-			</td>
-			<td width=100>13
-			</td>
-			<td width=100>17
-			</td>
-			<td width=100>21
-			</td>
-			<td width=100>25
-			</td>
-			<td >29
-			</td>
-		</tr>
-	</table>
-	<br>
-	<section  class="text-center">
-		<label>DNI</label><br>
-	    <input type="number" id="nro_dni">
-	    <button class="btn btn-primary" onclick="buscar()">Buscar</button><br>
-	    <br>
-		<label>NOMBRE</label>
-        <input type="text" id="name"><br>
-    	<label>APELLIDOS</label>
-        <input type="text" id="last_name"><br>
-		<label>DNI</label>
-        <input type="text" id="dni"><br>
-        <button class="btn btn-primary" id="reservar" onclick="reservar()">Reservar</button>
-		<button class="btn btn-primary" id="cancelar" onclick="cancelar()">Cancelar</button>
-	</section>
-	
-	<div id="mostrar"></div>
+<body class="body">
+	<header>
+		<h1 class="text-center">SISTEMA DE RESERVA DE ASIENTOS</h1>
+	</header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+				<h2>MAPA DE ASIENTOS</h2>
+				<h6>Escoge tu número de asiento</h6>
+				<table id="seats"></table><!-- dibujar asientos -->
+			</div>
+			<div class="col-md-6 ">
+				<h2>Identificación</h2>
+				<h6>Completa tus datos</h6>
+				<form class="form" action="#">
+					<label for="NRO ASIENTO">
+						<span data-text="NRO ASIENTO">Nro Asiento</span>
+						<div id="nSeat"></div>
+					</label>
+					<fieldset class="form-fieldset ui-input __first">
+					  <input type="text" id="username" tabindex="0" />
+					  <label for="Nombre">
+					    <span data-text="Nombre">Nombre</span>
+					  </label>
+					</fieldset>
 
-	<div id="listar"></div>	
+					<fieldset class="form-fieldset ui-input __second">
+					  <input type="text" id="last_name" tabindex="0" />
+					  <label for="apellido">
+					    <span data-text="Apellido">Apellido</span>
+					  </label>
+					</fieldset>
+
+					<fieldset class="form-fieldset ui-input __third">
+					  <input type="number" id="nro_dni">
+					  <label for="Número de DNI">
+					    <span data-text="Número de DNI">Número de DNI</span>
+					  </label>
+				</fieldset>    
+				<div class="form-footer text-center">
+					<button class="btn" id="btn-reserv">Reservar</button>
+					<button class="btn" id="btn-allList">Listar</button>
+					<button class="btn" id="btn-cancel">Cancelar</button>
+				</div>
+				<div id="search">
+					<input id="inputDni" placeholder="Ingrese número de DNI"/>
+					<button id="btn-search"><span  class="glyphicon glyphicon-search"></span></button>
+				</div>
+				<div id="info" >
+			
+				</div>
+				</form>
+			</div>
+		</div>
+		
 	</div>
 	
 	<script src="main.js"></script>
