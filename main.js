@@ -11,6 +11,7 @@ class mapSeat {
         this.addData();
         this.searchData();
         this.printAll();
+        this.cancel();
     }
     buildMapSeat() {
         for(let i=0;i<8;i++){
@@ -57,15 +58,7 @@ class mapSeat {
         });
     }
     searchData(){    
-        $('#btn-search').click(() => {
-            // let User = $("#inputDni").val();
-            // if(User == undefined)
-            // alert("No se encontró coincidencias.");
-            // else{
-            // $("#infoNombre").html(`<b>User: </b>${User.nombres} ${User.apellidos}`);
-            // $("#infoDNI").html(`<b>DNI: </b>${User.dni}`);
-            // $("#infoAsiento").html(`<b>Nro. Asiento: </b>${this.bus.asientoSelec}`);
-            
+        $('#btn-search').click(() => {            
             let nDni = $('#inputDni').val();
             console.log(nDni);
             for (var i = 0; i < this.allUser; i++) {
@@ -89,7 +82,6 @@ class mapSeat {
     }
     printAll() {
         $('#btn-allList').click(() => {
-            alert("fd");
             $('#info').empty();
             let tam=this.allUser.length;
             console.log(tam);
